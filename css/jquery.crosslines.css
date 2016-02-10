@@ -25,6 +25,8 @@
 	    position: absolute;
 	    top: -60px;
 	    right: -100px;
+	    width: 452px;
+		height: 1096px;
 	}
 	#indepth_portada_cnt #juanlogo {
 	    margin-top: 50px;
@@ -86,6 +88,9 @@
 		margin-bottom: 14px;
 		position: relative;
 	}
+	.indepth_con_jugadores{
+		cursor: pointer;
+	}
 		.foto {
 		    display: inline-block;
 		    width: 46px;
@@ -108,3 +113,99 @@
 #indepth_resultado {
 	display: none;
 }
+@media(max-width: 1100px){	
+	#indepth_portada{
+		height: 670px;
+	}
+		#indepth_portada_txt {
+			padding-top: 150px;
+			font-size: 80px;
+			line-height: 75px;
+		}
+		#indepth_portada_cnt {
+			width: 600px;
+		}
+		#indepth_portada_cnt #taco {
+		    position: absolute;
+		    top: -60px;
+		    right: -100px;
+		    width: 339px;
+		    height: 822px;
+		}
+}
+@media(max-width: 900px){
+	.indepth_elementos {
+	    height: 600px;
+	}
+	#indepth_ficha_cnt img {
+	    top: -50px;
+	    width: 897px;
+	    height: 762.75px;
+	    right: -55px;
+	}
+	#indepth_concurso {
+		display: none;
+	}
+}
+@media(max-width: 800px){
+	#indepth_portada {
+	    overflow: hidden;
+	}
+	#indepth_portada_cnt {
+	    width: 90%;
+	}
+	#indepth_portada_cnt #taco {
+	    height: 100%;
+	    width: auto;
+	    top: 0px;
+	}
+}
+@media(max-width: 600px) and (orientation: landscape){
+	#indepth_portada_txt {
+	    padding-top: 5%;
+	}
+}
+@media(max-width: 600px){
+	#indepth_portada {
+	    height: 100vh;
+	}
+	#indepth_portada_txt {
+	    font-size: 50px;
+	    line-height: 50px;
+	    padding-top: 50%;
+	}
+	#indepth_portada_cnt #taco {
+	    height: 100%;
+	    width: auto;
+	    top: 0px;
+	    right: -50%;
+	}
+	.indepth_elementos {
+	    height: 100vh;
+	}
+	#indepth_ficha {
+		height: 400px;
+	}
+	#indepth_ficha_cnt {
+	    width: 500px;
+	}
+	#indepth_ficha_cnt img {
+	    width: 598px;
+	    height: 508.5px;
+	    right: -130px;
+	}
+}
+@media(max-width: 400px){
+	#indepth_portada_txt {
+	    font-size: 40px;
+	    line-height: 40px;
+	    padding-top: 50%;
+	}
+	#indepth_portada_cnt #taco {
+	    height: 100%;
+	    width: auto;
+	    top: 20px;
+	    right: -100px;
+	}
+}
+
