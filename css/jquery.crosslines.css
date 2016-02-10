@@ -1,0 +1,110 @@
+.indepth_elementos {
+    width: 100%;
+    height: 900px;
+    background-position: center;
+    background-size: cover;
+}
+#indepth_portada {
+	background-image: url("../images/fondoblanco.jpg");
+}
+	#indepth_portada_cnt{
+		height: 100%;
+		margin: auto;
+		position: relative;
+		width: 900px;
+	}
+	#indepth_portada_txt{
+		font-family: "Fjalla One",sans-serif;
+		font-size: 120px;
+		color: #5ba344;
+		line-height: 110px;
+		padding-top: 250px;
+		letter-spacing: 0px;
+	}
+	#indepth_portada_cnt #taco {
+	    position: absolute;
+	    top: -60px;
+	    right: -100px;
+	}
+	#indepth_portada_cnt #juanlogo {
+	    margin-top: 50px;
+	}
+#indepth_banner2 {background-image: url("../images/fondoproducto.jpg");}
+#indepth_ficha {
+	background-image: url("../images/fondolila.jpg");
+	overflow: hidden;
+}
+	#indepth_ficha_cnt{
+		width: 900px;
+		height: 100%;
+		position: relative;
+		margin: auto;
+	}
+	#indepth_ficha_cnt img {
+	    position: absolute;
+	    top: -50px;
+	    width: 1196px;
+		height: 1017px;
+	}
+#indepth_concurso {
+	background-image: url("../images/jamesfondo1.jpg");
+}
+	#indepth_concurso_titulo {
+	    font-family: "Fjalla One",sans-serif;
+	    color: #4D2052;
+	    width: 900px;
+	    padding-top: 140px;
+	    margin: auto;
+	    font-size: 46px;
+	    text-align: center;
+	}
+	#indepth_texture{
+		display: none;
+	}
+	#indepth_concurso_ctn {
+	    width: 900px;
+	    height: 400px;
+	    position: relative;
+	    margin: auto;
+	    margin-top: 80px;
+	}
+	.indepth_concurso_elemetos{
+		width: 300px;
+		display: inline-block;
+		height: 100%;
+		float: left;
+	}
+	#indepth_lineas {
+	    width: 300px;
+	}
+	.indepth_con_jugadores,
+	.indepth_con_equipos{
+		width: 100%;
+		height: 45px;
+		display: inline-block;
+		background-color: #4D2052;
+		margin-bottom: 14px;
+		position: relative;
+	}
+		.foto {
+		    display: inline-block;
+		    width: 46px;
+		    height: 46px;
+		    float: left;
+		}
+		.nombre {
+		    display: inline-block;
+		    float: left;
+		    color: #ffffff;
+		    font-family: "Fjalla One",sans-serif;
+		    line-height: 45px;
+		    padding-left: 10px;
+		    font-size: 20px;
+		}
+		.indepth_con_equipos .nombre {
+			float: right;
+			padding-right: 10px;
+		}
+#indepth_resultado {
+	display: none;
+}
