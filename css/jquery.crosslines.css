@@ -76,9 +76,6 @@
 		height: 100%;
 		float: left;
 	}
-	#indepth_lineas {
-	    width: 300px;
-	}
 	.indepth_con_jugadores,
 	.indepth_con_equipos{
 		width: 100%;
@@ -109,6 +106,12 @@
 		.indepth_con_equipos .nombre {
 			float: right;
 			padding-right: 10px; 
+		}
+		.select{
+			box-shadow: 0px 0px 10px #ff0;
+		}
+		.over{
+			background-color: #802080;
 		}
 #indepth_resultado {
 	display: none;
@@ -143,8 +146,17 @@
 	    height: 762.75px;
 	    right: -55px;
 	}
-	#indepth_concurso {
-		display: none;
+	#indepth_concurso_titulo {
+	    width: 95%;
+	    padding-top: 80px;
+	    font-size: 30px;
+	}
+	#indepth_concurso_ctn {
+	    width: 600px;
+	    margin-top: 50px;
+	}
+	.indepth_concurso_elemetos {
+	    width: 200px;
 	}
 }
 @media(max-width: 800px){
@@ -196,6 +208,12 @@
 	    width: 598px;
 	    height: 508.5px;
 	    right: -130px;
+	}
+	#indepth_concurso_ctn {
+	    width: 300px;
+	}
+	.indepth_concurso_elemetos {
+	    width: 100px;
 	}
 }
 @media(max-width: 400px){

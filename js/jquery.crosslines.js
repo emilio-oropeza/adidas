@@ -16,15 +16,27 @@
 			texture:null,
 			pattern: null,
 			posiciones:[20,80,140,200,260,320,380],
+			canvas_width: null,
+			canvas_height: null,
 			methods:{
 				init:function(){
 					componentObj.ctx = document.getElementById("lineas").getContext("2d");
 					componentObj.ctx.texture = document.getElementById("indepth_texture");
 					componentObj.pattern = componentObj.ctx.createPattern(componentObj.ctx.texture, "repeat");
 					componentObj.methods.random();
+					componentObj.methods.resize_canvas();
+					$(window).resize(function(){
+						componentObj.methods.resize_canvas();
+					});
 					$(".indepth_con_jugadores").draggable({
 						revert: true,
-						disabled: false
+						disabled: false,
+						start: function(){
+							$(this).addClass("select");
+						},
+						stop:function(){
+							$(this).removeClass("select");
+						}
 					})
 					$(".indepth_con_equipos").droppable({
 						disabled: false,
@@ -34,8 +46,15 @@
 							var x1 = $(ui.draggable).attr("pos");
 							var x2 = $(this).attr("pos");
 							componentObj.methods.dibujarLinea(componentObj.posiciones[x1], componentObj.posiciones[x2]);
+							$(this).removeClass("over");
+						},
+						over: function(){
+							$(this).addClass("over");
+						},
+						out: function(){
+							$(this).removeClass("over");
 						}
-					});					
+					});		
 				},
 				random: function(){
 					var arr1 = [1,2,3,4,5,6,7];
@@ -95,11 +114,23 @@
 				dibujarLinea: function(y1,y2){
 					componentObj.ctx.beginPath();
 					componentObj.ctx.moveTo(0,y1);
-					componentObj.ctx.lineTo(300,y2)
+					componentObj.ctx.lineTo(componentObj.canvas_width,y2)
 				    componentObj.ctx.lineWidth = 10;
 					componentObj.ctx.strokeStyle = componentObj.pattern;
 				    componentObj.ctx.stroke();
 					componentObj.ctx.closePath();
+				},
+				resize_canvas:function(){
+					componentObj.canvas_width = $("#indepth_lineas").width();
+					componentObj.canvas_height = $("#indepth_lineas").height();
+					$("#lineas").attr("width",componentObj.canvas_width);
+					$("#lineas").attr("height",componentObj.canvas_height);
+					$(".indepth_con_jugadores").each(function(){
+						$(this).width(componentObj.canvas_width);
+					});
+					$(".indepth_con_equipos").each(function(){
+						$(this).width(componentObj.canvas_width);
+					});
 				},
 				dibujarGrid: function(){
 					var ancho = $(target).find("#lineas").width();
