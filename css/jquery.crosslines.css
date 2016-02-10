@@ -103,7 +103,7 @@
 		}
 		.indepth_con_equipos .nombre {
 			float: right;
-			padding-right: 10px;
+			padding-right: 10px; 
 		}
 #indepth_resultado {
 	display: none;
