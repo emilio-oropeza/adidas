@@ -15,12 +15,15 @@
 	}
 	#indepth_portada_txt{
 		font-family: "Fjalla One",sans-serif;
-		font-size: 120px;
+		font-size: 112px;
 		color: #5ba344;
-		line-height: 110px;
+		line-height: 168px;
 		padding-top: 250px;
 		letter-spacing: 0px;
 	}
+		#indepth_portada_txt span {
+		    font-size: 232px;
+		}
 	#indepth_portada_cnt #taco {
 	    position: absolute;
 	    top: -60px;
@@ -123,7 +126,10 @@
 		#indepth_portada_txt {
 			padding-top: 150px;
 			font-size: 80px;
-			line-height: 75px;
+			line-height: 118px;
+		}
+		#indepth_portada_txt span {
+		    font-size: 162px;
 		}
 		#indepth_portada_cnt {
 			width: 600px;
@@ -183,8 +189,11 @@
 	}
 	#indepth_portada_txt {
 	    font-size: 50px;
-	    line-height: 50px;
+	    line-height: 80px;
 	    padding-top: 50%;
+	}
+	#indepth_portada_txt span {
+	    font-size: 100px;
 	}
 	#indepth_portada_cnt #taco {
 	    height: 100%;
@@ -215,12 +224,31 @@
 	.indepth_concurso_elemetos {
 	    width: 100px;
 	}
+	#indepth_pregunta{
+		width: 46px;
+	}
+	#indepth_respuesta{
+		width: 154px;
+	}
+		.nombre {
+		    width: 100%;
+		    overflow: hidden;
+		    height: 100%;
+		    padding-left: 0px;
+		    float: left;
+		}
+		.indepth_con_jugadores .nombre {
+		    display: none;
+		}
 }
 @media(max-width: 400px){
 	#indepth_portada_txt {
 	    font-size: 40px;
-	    line-height: 40px;
+	    line-height: 60px;
 	    padding-top: 50%;
+	}
+	#indepth_portada_txt span {
+	    font-size: 80px;
 	}
 	#indepth_portada_cnt #taco {
 	    height: 100%;

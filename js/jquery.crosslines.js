@@ -126,10 +126,18 @@
 					$("#lineas").attr("width",componentObj.canvas_width);
 					$("#lineas").attr("height",componentObj.canvas_height);
 					$(".indepth_con_jugadores").each(function(){
-						$(this).width(componentObj.canvas_width);
+						if($(window).width() > 600){
+							$(this).width(componentObj.canvas_width);
+						}else{
+							$(this).width(46);
+						}
 					});
 					$(".indepth_con_equipos").each(function(){
-						$(this).width(componentObj.canvas_width);
+						if($(window).width() > 600){
+							$(this).width(componentObj.canvas_width);
+						}else{
+							$(this).width(154);
+						}
 					});
 				},
 				dibujarGrid: function(){
