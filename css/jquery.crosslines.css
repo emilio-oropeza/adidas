@@ -87,16 +87,33 @@
 		margin-bottom: 14px;
 		position: relative;
 	}
+	.indepth_con_equipos {
+	    border-top-right-radius: 25px;
+	    border-bottom-right-radius: 25px;
+	}	
 	.indepth_con_jugadores{
 		cursor: pointer;
+		border-top-left-radius: 25px;
+	    border-bottom-left-radius: 25px;
 	}
 		.foto {
 		    display: inline-block;
-		    width: 46px;
-		    height: 46px;
+		    width: 40px;
+			height: 40px;
 		    float: left;
+		    border-radius: 40px;
+			background-position: center;
+			background-repeat: no-repeat;
+			margin-top: 2.5px;
 		}
-		.nombre {
+		.indepth_con_jugadores .foto{
+			margin-left: 2.5px;
+		}
+		.indepth_con_equipos .foto{
+			float: right;
+			margin-right: 2.5px;
+		}
+		.nombre, .nombre_movil {
 		    display: inline-block;
 		    float: left;
 		    color: #ffffff;
@@ -104,6 +121,9 @@
 		    line-height: 45px;
 		    padding-left: 10px;
 		    font-size: 20px;
+		}
+		.nombre_movil{
+			display: none;
 		}
 		.indepth_con_equipos .nombre {
 			float: right;
@@ -163,6 +183,9 @@
 	#indepth_portada_cnt #juanlogo {
     	width: 139px;
 	}
+	.indepth_con_equipos .nombre {
+	    font-size: 15px;
+	}
 }
 @media(max-width: 800px){
 	#indepth_portada {
@@ -206,6 +229,9 @@
 	.indepth_elementos {
 	    height: 100vh;
 	}
+	#indepth_concurso {
+	    min-height: 700px;
+	}
 	#indepth_ficha {
 		height: 400px;
 	}
@@ -218,22 +244,32 @@
 	    right: -130px;
 	}
 	#indepth_concurso_ctn {
-	    width: 300px;
+	    width: 500px;
 	}
-	.indepth_concurso_elemetos {
-	    width: 208px;
+	#indepth_lineas{
+		width: 100px;
 	}
-	#indepth_pregunta{
-		width: 46px;
+	
+}
+@media(max-width: 500px){
+	#indepth_concurso_ctn {
+	    width: 320px;
 	}
-	#indepth_respuesta{
-		width: 46px;
+	.indepth_concurso_elemetos{
+		width: 120px;
 	}
-		.nombre {
-		    display: none;
-		}
+	#indepth_lineas{
+		width: 80px;
+	}
+	.nombre {
+		display: none;
+	}
+	.nombre_movil{
+		display: inline-block;
+	}
 }
 @media(max-width: 400px){
+	
 	#indepth_portada_txt {
 	    font-size: 40px;
 	    line-height: 40px;

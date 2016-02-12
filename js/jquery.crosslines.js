@@ -80,15 +80,15 @@
 								flag2 = true;
 							}
 						}
-						jugadores[i].setPosJ((pos1-1));
-						jugadores[i].setPosO((pos2-1));
+						jugadores[i].pos_jugador = (pos1-1);
+						jugadores[i].pos_origen = (pos2-1);
 					}
 					componentObj.methods.muestra_jugadores();				
 				},
 				muestra_jugadores:function(){
 					for (var i = 0; i < jugadores.length; i++) {
-						var indexJ = jugadores[i].getPosJ();
-						var indexO = jugadores[i].getPosO();
+						var indexJ = jugadores[i].pos_jugador;
+						var indexO = jugadores[i].pos_origen;
 						var divJ = null;
 						var divO = null;
 						$(".indepth_con_jugadores").each(function(x, val){
@@ -104,15 +104,17 @@
 						var foto = $('<span class="foto"></span>').appendTo(divJ);
 						var foto2 = $('<span class="foto"></span>').appendTo(divO);
 						$(foto).css({
-							"background-image": 'url("images/jugadores/'+jugadores[i].getImg()+'.jpg")'
+							"background-image": 'url("images/jugadores/'+jugadores[i].img+'.jpg")'
 						})
 						$(foto2).css({
-							"background-image": 'url("images/equipos/'+jugadores[i].getImgO()+'.jpg")'
+							"background-image": 'url("images/equipos/'+jugadores[i].imgo+'.png")'
 						})
-						$('<span class="nombre">'+jugadores[i].getNombre()+'</span>').appendTo(divJ);
-						$('<span class="nombre">'+jugadores[i].getOrigen()+'</span>').appendTo(divO);
-						$(divJ).attr("pos",jugadores[i].getPosJ());
-						$(divO).attr("pos",jugadores[i].getPosO());
+						$('<span class="nombre">'+jugadores[i].nombre+'</span>').appendTo(divJ);
+						$('<span class="nombre_movil">'+jugadores[i].nombreMovil+'</span>').appendTo(divJ);
+						$('<span class="nombre">'+jugadores[i].origen+'</span>').appendTo(divO);
+						$('<span class="nombre_movil">'+jugadores[i].origenMovil+'</span>').appendTo(divO);
+						$(divJ).attr("pos",jugadores[i].pos_jugador);
+						$(divO).attr("pos",jugadores[i].pos_origen);
 					}
 				},
 				dibujarLinea: function(y1,y2){
@@ -130,17 +132,21 @@
 					$("#lineas").attr("width",componentObj.canvas_width);
 					$("#lineas").attr("height",componentObj.canvas_height);
 					$(".indepth_con_jugadores").each(function(){
-						if($(window).width() > 600){
+						if($(window).width() >= 600){
 							$(this).width(componentObj.canvas_width);
+						}else if($(window).width() >= 500 && $(window).width() < 600){
+							$(this).width(200);
 						}else{
-							$(this).width(46);
+							$(this).width(120);
 						}
 					});
 					$(".indepth_con_equipos").each(function(){
-						if($(window).width() > 600){
+						if($(window).width() >= 600){
 							$(this).width(componentObj.canvas_width);
+						}else if($(window).width() >= 500 && $(window).width() < 600){
+							$(this).width(200);
 						}else{
-							$(this).width(46);
+							$(this).width(120);
 						}
 					});
 				},
