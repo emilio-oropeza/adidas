@@ -137,7 +137,23 @@
 		}
 #indepth_resultado {
 	display: none;
+	background-image: url("../images/fondojames.jpg"); 
+	position: relative;
 }
+	#indepth_res_inner{
+		width: 900px;
+		height: 100%;
+		margin: auto;
+		position: relative;
+	}
+	#indpeth_res_cont {
+	    width: 450px;
+	    height: 325px;
+	    position: absolute;
+	    border: 1px solid;
+	    right: 0px;
+		top: 240px;
+	}
 @media(max-width: 1100px){	
 	#indepth_portada{
 		height: 670px;

@@ -8,7 +8,7 @@ function jugador(n, nm, o, om, i, i2){
 	this.img = i;
 	this.imgo = i2;
 	this.valido = function(nombre, origen){
-		if(this.jugador === nombre & this.origen === origen){
+		if(this.nombre === nombre & this.origen === origen){
 			return true;
 		}else{
 			return false;
