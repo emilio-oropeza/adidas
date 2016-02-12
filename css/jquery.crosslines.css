@@ -15,15 +15,12 @@
 	}
 	#indepth_portada_txt{
 		font-family: "Fjalla One",sans-serif;
-		font-size: 112px;
+		font-size: 120px;
 		color: #5ba344;
-		line-height: 168px;
+		line-height: 110px;
 		padding-top: 250px;
 		letter-spacing: 0px;
 	}
-		#indepth_portada_txt span {
-		    font-size: 232px;
-		}
 	#indepth_portada_cnt #taco {
 	    position: absolute;
 	    top: -60px;
@@ -33,6 +30,8 @@
 	}
 	#indepth_portada_cnt #juanlogo {
 	    margin-top: 50px;
+	    width: 185px;
+		height: auto;
 	}
 #indepth_banner2 {background-image: url("../images/fondoproducto.jpg");}
 #indepth_ficha {
@@ -126,10 +125,7 @@
 		#indepth_portada_txt {
 			padding-top: 150px;
 			font-size: 80px;
-			line-height: 118px;
-		}
-		#indepth_portada_txt span {
-		    font-size: 162px;
+			line-height: 75px;
 		}
 		#indepth_portada_cnt {
 			width: 600px;
@@ -164,6 +160,9 @@
 	.indepth_concurso_elemetos {
 	    width: 200px;
 	}
+	#indepth_portada_cnt #juanlogo {
+    	width: 139px;
+	}
 }
 @media(max-width: 800px){
 	#indepth_portada {
@@ -189,17 +188,17 @@
 	}
 	#indepth_portada_txt {
 	    font-size: 50px;
-	    line-height: 80px;
+	    line-height: 50px;
 	    padding-top: 50%;
-	}
-	#indepth_portada_txt span {
-	    font-size: 100px;
 	}
 	#indepth_portada_cnt #taco {
 	    height: 100%;
 	    width: auto;
 	    top: 0px;
 	    right: -50%;
+	}
+	#indepth_portada_cnt #juanlogo {
+    	width: 92px;
 	}
 	#indepth_banner1{
 		height: 400px;
@@ -222,33 +221,23 @@
 	    width: 300px;
 	}
 	.indepth_concurso_elemetos {
-	    width: 100px;
+	    width: 208px;
 	}
 	#indepth_pregunta{
 		width: 46px;
 	}
 	#indepth_respuesta{
-		width: 154px;
+		width: 46px;
 	}
 		.nombre {
-		    width: 100%;
-		    overflow: hidden;
-		    height: 100%;
-		    padding-left: 0px;
-		    float: left;
-		}
-		.indepth_con_jugadores .nombre {
 		    display: none;
 		}
 }
 @media(max-width: 400px){
 	#indepth_portada_txt {
 	    font-size: 40px;
-	    line-height: 60px;
+	    line-height: 40px;
 	    padding-top: 50%;
-	}
-	#indepth_portada_txt span {
-	    font-size: 80px;
 	}
 	#indepth_portada_cnt #taco {
 	    height: 100%;

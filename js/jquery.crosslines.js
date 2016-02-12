@@ -102,8 +102,12 @@
 							}
 						});
 						var foto = $('<span class="foto"></span>').appendTo(divJ);
+						var foto2 = $('<span class="foto"></span>').appendTo(divO);
 						$(foto).css({
 							"background-image": 'url("images/jugadores/'+jugadores[i].getImg()+'.jpg")'
+						})
+						$(foto2).css({
+							"background-image": 'url("images/equipos/'+jugadores[i].getImgO()+'.jpg")'
 						})
 						$('<span class="nombre">'+jugadores[i].getNombre()+'</span>').appendTo(divJ);
 						$('<span class="nombre">'+jugadores[i].getOrigen()+'</span>').appendTo(divO);
@@ -136,7 +140,7 @@
 						if($(window).width() > 600){
 							$(this).width(componentObj.canvas_width);
 						}else{
-							$(this).width(154);
+							$(this).width(46);
 						}
 					});
 				},
