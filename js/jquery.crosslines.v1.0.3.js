@@ -1,3 +1,4 @@
+
 (function($){
 	$.fn.crosslines = function(options){
 		return this.each(function() {
@@ -63,6 +64,7 @@
 					});	
 				},
 				random: function(){
+					console.log("random");
 					var arr1 = [1,2,3,4,5,6,7];
 					var arr2 = [1,2,3,4,5,6,7];
 					for (var i = 0; i < jugadores.length; i++) {
@@ -110,10 +112,10 @@
 						var foto = $('<span class="foto"></span>').appendTo(divJ);
 						var foto2 = $('<span class="foto"></span>').appendTo(divO);
 						$(foto).css({
-							"background-image": 'url("images/jugadores/'+jugadores[i].img+'.jpg")'
+							"background-image": 'url("'+urlIndepth+'images/jugadores/'+jugadores[i].img+'.jpg")'
 						})
 						$(foto2).css({
-							"background-image": 'url("images/equipos/'+jugadores[i].imgo+'.png")'
+							"background-image": 'url("'+urlIndepth+'images/equipos/'+jugadores[i].imgo+'.png")'
 						})
 						$('<span class="nombre">'+jugadores[i].nombre+'</span>').appendTo(divJ);
 						$('<span class="nombre_movil">'+jugadores[i].nombreMovil+'</span>').appendTo(divJ);
@@ -220,4 +222,12 @@
 })(jQuery);
 $(document).ready(function(){
 	$("#indepth_concurso").crosslines();
+	$("#indepth_concurso").waypoint(function(direction) {
+		if(direction=='up'){
+		 	$("#indepth_etiqueta").fadeIn("slow");
+		}else{
+			$("#indepth_etiqueta").fadeOut();				   
+		}		 
+		$("#indepth_etiqueta").show();
+	},{offset: 'bottom-in-view'});
 });
