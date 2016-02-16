@@ -49,8 +49,9 @@
 							$(ui.draggable).draggable( "option", "disabled", true);
 							$(this).removeClass("over");
 							componentObj.res.push([ui.draggable, this]);
+							componentObj.methods.resize_canvas();
 							componentObj.methods.redibujar();
-							componentObj.methods.redibujar();
+							//componentObj.methods.redibujar();
 							componentObj.methods.validar();
 						},
 						over: function(){
@@ -158,14 +159,14 @@
 					});
 				},
 				dibujar: function(){
-					componentObj.ctx.clearRect(0, 0, componentObj.canvas_width, componentObj.canvas_height);
+					componentObj.ctx.clearRect(0, 0, 300, 400);
 					for (var i = 0; i < componentObj.res.length; i++) {						
 						var x1 = $(componentObj.res[i][0]).attr("pos");
 						var x2 = $(componentObj.res[i][1]).attr("pos");
 						componentObj.methods.dibujarLinea(componentObj.posiciones[x1], componentObj.posiciones[x2]);
 					}
 				},
-				redibujar: function(){
+				redibujar: function(){					
 					componentObj.ctx.width = 300 * componentObj.scala;
 					componentObj.ctx.scale(componentObj.scala, 1);
 					componentObj.methods.dibujar();
@@ -203,7 +204,8 @@
 				},
 				display_res: function(res){
 					var s = (res == 1)?'':'s';
-					var msg = "https://twitter.com/intent/tweet?via=Juanfutbol&text=Obtuve "+res+" acierto"+s+"&url=http://juanfutbol.com&hashtags=JUANACE16"
+					var msg = "https://twitter.com/intent/tweet?via=Juanfutbol&text=¡Acerté "+res+
+					" de 7! Ahí va mi pronóstico del Málaga-Real Madrid para ganar unos adidas&hashtags=ACE16,BeTheDifference,JuanACE16"
 					var text = "javascript:sharePopUp('tw', '"+encodeURIComponent(msg)+"');"
 					$("#share_tw").attr("href",text);
 					$("#indepth_concurso").fadeOut("slow");
