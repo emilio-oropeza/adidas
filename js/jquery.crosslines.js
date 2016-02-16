@@ -198,17 +198,14 @@
 								}
 							}
 						}						
-						componentObj.methods.display_res(contador);
-					}	
+						//componentObj.methods.display_res(contador);
+					}
+					componentObj.methods.display_res(3);	
 				},
 				display_res: function(res){
-					var s = (res == 1)?'':'s';
-					var msg = "https://twitter.com/intent/tweet?via=Juanfutbol&text=Obtuve "+res+" acierto"+s+"&url=http://juanfutbol.com&hashtags=JUANACE16"
-					var text = "javascript:sharePopUp('tw', '"+encodeURIComponent(msg)+"');"
-					$("#share_tw").attr("href",text);
 					$("#indepth_concurso").fadeOut("slow");
 					$("#indepth_resultado").fadeIn("slow");
-					$("#inpdeth_score").find("span").text("0"+res);
+					alert("Correctas: "+res);
 				}
 			}
 		};
