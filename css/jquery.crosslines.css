@@ -1,3 +1,28 @@
+#preload{ background-image: url("../images/taco.png");  }
+#preload{ background-image: url("../images/agujetas_text.jpeg");  }
+#preload{ background-image: url("../images/botontwitter.jpg");  }
+#preload{ background-image: url("../images/etiqueta.png");  }
+#preload{ background-image: url("../images/fichatecnica.jpg");  }
+#preload{ background-image: url("../images/fondoblanco.jpg");  }
+#preload{ background-image: url("../images/fondojames.jpg");  }
+#preload{ background-image: url("../images/fondolila.jpg");  }
+#preload{ background-image: url("../images/fondoproducto.jpg");  }
+#preload{ background-image: url("../images/jamesfondo1.jpg");  }
+#preload{ background-image: url("../images/juan.png");  }
+#preload{ background-image: url("../images/resultados.jpg");  }
+#preload{ background-image: url("../images/equipos/barca.png");  }
+#preload{ background-image: url("../images/equipos/basel.png");  }
+#preload{ background-image: url("../images/equipos/envigado.png");  }
+#preload{ background-image: url("../images/equipos/shalke.png");  }
+#preload{ background-image: url("../images/equipos/spbra.png");  }
+#preload{ background-image: url("../images/jugadores/iniesta.jpg");  }
+#preload{ background-image: url("../images/jugadores/james.jpg");  }
+#preload{ background-image: url("../images/jugadores/neuer.jpg");  }
+#preload{ background-image: url("../images/jugadores/oscar.jpg");  }
+#preload{ background-image: url("../images/jugadores/ozil.jpg");  }
+#preload{ background-image: url("../images/jugadores/rakitik.jpg");  }
+#preload{ background-image: url("../images/jugadores/xabi.jpg");  }
+
 .indepth_elementos {
     width: 100%;
     height: 900px;
@@ -195,6 +220,8 @@
 		}
 #indepth_etiqueta {
     background-image: url("../images/etiqueta.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
     width: 106px;
     height: 113px;
     position: fixed;

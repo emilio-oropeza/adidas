@@ -128,6 +128,7 @@
 					componentObj.ctx.moveTo(0,y1);
 					componentObj.ctx.lineTo(300,y2)
 				    componentObj.ctx.lineWidth = 10;
+				    componentObj.ctx.strokeStyle ="#adc200";
 					componentObj.ctx.strokeStyle = componentObj.pattern;
 				    componentObj.ctx.stroke();
 				    componentObj.ctx.closePath();
